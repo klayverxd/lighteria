@@ -1,10 +1,10 @@
 import React from 'react'
-import { StyleSheet, Text, View, Image } from 'react-native'
+import { View, Text, Image, StyleSheet } from 'react-native'
 
-const Produto = ({ imagem, titulo }) => {
+export const Item = ({ imagem, titulo }) => {
   return (
     <View style={styles.containerItem}>
-      <Image source={imagem} style={styles.image} resizeMode="contain" />
+      <Image source={imagem} style={styles.imagem} resizeMode="contain" />
       <Text style={styles.texto}>{titulo}</Text>
     </View>
   )
@@ -15,20 +15,19 @@ const styles = StyleSheet.create({
     height: 168,
     backgroundColor: '#fff',
     borderRadius: 10,
-
     flex: 1,
     justifyContent: 'center',
-    alignSelf: 'center',
+    alignItems: 'center',
     margin: 8,
   },
   texto: {
     marginTop: 8,
+    // fontFamily: 'OpenSans-SemiBold',
     fontSize: 14,
+    fontWeight: 'bold',
     color: '#848486',
   },
   imagem: {
     height: 84,
   },
 })
-
-export default Produto

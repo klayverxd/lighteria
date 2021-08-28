@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Image, Text, View } from 'react-native'
+import { View, StyleSheet, Text, Image } from 'react-native'
 
 const Cabecalho = () => {
   return (
@@ -9,14 +9,14 @@ const Cabecalho = () => {
         <View style={styles.containerSacola}>
           <Image
             source={require('../../../../assets/images/icone-sacola.png')}
-            style={styles.image}
+            style={styles.imagem}
           />
         </View>
       </View>
       <View style={styles.containerDescricao}>
         <View style={styles.separador} />
         <View style={styles.containerTexto}>
-          <Text style={styles.textDescricao}>Categorias</Text>
+          <Text style={styles.textoDescricao}>Categorias</Text>
         </View>
       </View>
     </>
@@ -26,12 +26,13 @@ const Cabecalho = () => {
 const styles = StyleSheet.create({
   containerTitulo: {
     flexDirection: 'row',
-    alignItems: 'center',
     justifyContent: 'space-between',
+    alignItems: 'center',
     paddingVertical: 16,
-    PaddingHorizontal: 6,
+    paddingHorizontal: 6,
   },
   titulo: {
+    // fontFamily: 'OpenSans-Bold',
     fontSize: 28,
     fontWeight: 'bold',
   },
@@ -40,27 +41,29 @@ const styles = StyleSheet.create({
     padding: 18,
     borderRadius: 30,
   },
-  image: {
+  imagem: {
     height: 30,
     width: 30,
   },
-  containerDescricao: {
-    // paddingHorizontal: 16,
-  },
   separador: {
     borderWidth: 0.5,
-    borderColor: '#a1a5aa',
+    borderColor: '#A1A5AA',
+    margin: 10,
+  },
+  containerDescricao: {
+    // paddingHorizontal: 16,
   },
   containerTexto: {
     flexDirection: 'row',
     justifyContent: 'center',
     marginTop: -46,
   },
-  textDescricao: {
-    padding: 34,
-    backgroundColor: '#f4f0f4',
+  textoDescricao: {
+    padding: 24,
+    backgroundColor: '#F4F0F4',
+    color: '#A1A5AA',
+    // fontFamily: 'OpenSans-Regular',
     fontSize: 16,
-    color: '#a1a5aa',
   },
 })
 

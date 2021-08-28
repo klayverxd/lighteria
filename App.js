@@ -1,12 +1,20 @@
 import React from 'react'
-import { StyleSheet, Text, SafeAreaView, View, Image } from 'react-native'
+import { StyleSheet, SafeAreaView, StatusBar } from 'react-native'
 import ListaProdutos from './src/views/ListaProdutos'
+
+import { NavigationContainer } from '@react-navigation/native'
+import { createStackNavigator } from '@react-navigation/stack'
+
+const Stack = createStackNavigator()
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      <ListaProdutos />
-    </SafeAreaView>
+    <NavigationContainer>
+      <SafeAreaView style={styles.container}>
+        <StatusBar />
+        <ListaProdutos />
+      </SafeAreaView>
+    </NavigationContainer>
   )
 }
 
@@ -22,7 +30,6 @@ const styles = StyleSheet.create({
     padding: 24,
   },
   titulo: {
-    // fontFamily: 'OpenSans-ExtraBold',
     fontSize: 28,
     fontWeight: 'bold',
   },
@@ -51,7 +58,7 @@ const styles = StyleSheet.create({
     padding: 34,
     backgroundColor: '#f4f0f4',
     fontSize: 16,
-    // fontFamily: 'OpenSans-ExtraBold',
+    fontWeight: 'bold',
     color: '#a1a5aa',
   },
 })
