@@ -1,9 +1,5 @@
 import React from 'react'
-import { View } from 'react-native'
-import Cabecalho from '../Cabecalho'
 
-const ListaProdutos = () => {
+export const ListaProdutos = () => {
   return <Lista />
 }
-
-export default ListaProdutos

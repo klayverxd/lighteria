@@ -1,18 +1,32 @@
 import React from 'react'
 import { StyleSheet, SafeAreaView, StatusBar } from 'react-native'
+
 import ListaProdutos from './src/views/ListaProdutos'
+import { DetalhesProduto } from './src/views/ListaProdutos/componentes/DetalhesProduto'
 
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
+import { COR_DE_FUNDO, FONT_SIZE_XX_LARGE } from './src/styles/styles'
 
 const Stack = createStackNavigator()
 
 export default function App() {
   return (
     <NavigationContainer>
+      <StatusBar />
       <SafeAreaView style={styles.container}>
-        <StatusBar />
-        <ListaProdutos />
+        <Stack.Navigator initialRouteName="ListaProdutos">
+          <Stack.Screen
+            name="ListaProdutos"
+            component={ListaProdutos}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="DetalhesProduto"
+            component={DetalhesProduto}
+            options={{ headerShown: false }}
+          />
+        </Stack.Navigator>
       </SafeAreaView>
     </NavigationContainer>
   )
@@ -21,7 +35,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f4f0f4',
+    backgroundColor: COR_DE_FUNDO,
   },
   containerTitulo: {
     flexDirection: 'row',
@@ -30,7 +44,7 @@ const styles = StyleSheet.create({
     padding: 24,
   },
   titulo: {
-    fontSize: 28,
+    fontSize: FONT_SIZE_XX_LARGE,
     fontWeight: 'bold',
   },
   containerSacola: {
@@ -56,7 +70,7 @@ const styles = StyleSheet.create({
   },
   textDescricao: {
     padding: 34,
-    backgroundColor: '#f4f0f4',
+    backgroundColor: COR_DE_FUNDO,
     fontSize: 16,
     fontWeight: 'bold',
     color: '#a1a5aa',
