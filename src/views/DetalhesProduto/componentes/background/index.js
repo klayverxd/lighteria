@@ -8,10 +8,10 @@ import {
   TouchableOpacity,
 } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
-import { Sacola } from '../../../../../../componentes/sacola'
+import { Sacola } from '../../../../componentes/sacola'
 
 export const Background = () => {
-  const imgSrc = require('../../../../../../assets/images/bgimg.jpg')
+  const imgSrc = require('../../../../assets/images/bgimg.jpg')
   const navigation = useNavigation()
   return (
     <View style={styles.bgContainer}>
@@ -23,7 +23,7 @@ export const Background = () => {
         <View style={styles.headerContainer}>
           <TouchableOpacity onPress={() => navigation.goBack()}>
             <Image
-              source={require('../../../../../../assets/images/flecha-esquerda.png')}
+              source={require('../../../../assets/images/flecha-esquerda.png')}
               style={styles.imagemSeta}
             />
           </TouchableOpacity>

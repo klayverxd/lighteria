@@ -6,7 +6,7 @@ import { DATA } from '../../utils/data'
 import { Item } from './componentes/Produto'
 import Cabecalho from './componentes/Cabecalho'
 
-const ListaProdutos = () => {
+export const ListaProdutos = () => {
   return (
     <View style={styles.container}>
       <FlatList
@@ -26,5 +26,3 @@ const styles = StyleSheet.create({
     marginHorizontal: 24,
   },
 })
-
-export default ListaProdutos

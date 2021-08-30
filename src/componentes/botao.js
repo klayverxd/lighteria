@@ -1,11 +1,6 @@
 import React from 'react'
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
-import {
-  LIGHTBLUE,
-  FONT_FAMILY_SEMI_BOLD,
-  FONT_SIZE_MEDIUM,
-  WHITE,
-} from '../styles/styles'
+import { LIGHTBLUE, FONT_SIZE_MEDIUM, WHITE } from '../styles/styles.js'
 
 export const Botao = ({ titulo, onPress }) => {
   return (
@@ -22,9 +17,11 @@ const styles = StyleSheet.create({
     backgroundColor: LIGHTBLUE,
     padding: 20,
     borderRadius: 6,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  texto: {
-    fontFamily: FONT_FAMILY_SEMI_BOLD,
+  botaoTexto: {
+    fontWeight: 'bold',
     fontSize: FONT_SIZE_MEDIUM,
     color: WHITE,
   },
